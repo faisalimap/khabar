@@ -5,9 +5,19 @@ on:
     - cron: '0 4 * * *' # Fires automatically every day at 04:00 UTC (9:30 AM IST)
   workflow_dispatch: # Allows you to manually click "Run workflow" from the GitHub Actions dashboard
 
+# Concurrency prevents multiple runs from overlapping and breaking the Pages deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   scrape-and-compile:
     runs-on: ubuntu-latest
+    
+    # This grants the GITHUB_TOKEN permission to push files back to your repo
+    permissions:
+      contents: write
+      
     steps:
       - name: Import Main Branch Code Repository
         uses: actions/checkout@v4
@@ -16,7 +26,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          # Removed cache: 'pip' to prevent the "No file matched" error
 
       - name: Install Production Scraper Dependencies
         run: |
