@@ -7,7 +7,7 @@ on:
 
 # Concurrency prevents multiple runs from overlapping and breaking the Pages deployment
 concurrency:
-  group: "pages"
+  group: "scrape-and-compile"
   cancel-in-progress: true
 
 jobs:
