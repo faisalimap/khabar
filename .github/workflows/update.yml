@@ -1,0 +1,44 @@
+name: DigiKhabar Premium Pipeline Automation
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Fires automatically every day at 04:00 UTC (9:30 AM IST)
+  workflow_dispatch: # Allows you to manually click "Run workflow" from the GitHub Actions dashboard
+
+jobs:
+  scrape-and-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import Main Branch Code Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Python Runtime Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Production Scraper Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Execute Live Scraper Stream Engine
+        env:
+          GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+          WORLDNEWS_API_KEY: ${{ secrets.WORLDNEWS_API_KEY }}
+          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+          NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
+        run: python fetch_news.py
+
+      - name: Check in Fresh Payload & Trigger GitHub Pages Deployment
+        run: |
+          git config --global user.name "ISBN Media Automation Bot"
+          git config --global user.email "bot@isbn.qzz.io"
+          git add news.json
+          
+          # The "|| exit 0" ensures the pipeline doesn't show a red error failure 
+          # if the APIs return the exact same data and there are no changes to commit.
+          git commit -m "Automated Network Refresh [skip ci]" || exit 0
+          git push
