@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ur" class="dark">
+<html lang="ur" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,11 +65,9 @@
         .bg-surface-adaptive { background-color: var(--bg-surface); }
         .text-muted-adaptive { color: var(--text-muted); }
         
-        /* Independent Ticker Animations for RTL and LTR - Slowed down for readability */
-        @keyframes marquee-ltr { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        /* Unified RTL animation for ticker */
         @keyframes marquee-rtl { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
         
-        .ticker-stream-ltr { animation: marquee-ltr 50s linear infinite; }
         .ticker-stream-rtl { animation: marquee-rtl 50s linear infinite; }
         
         .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -78,20 +76,30 @@
 </head>
 <body dir="rtl" class="flex flex-col min-h-screen antialiased urdu-text">
 
-    <header class="bg-nav-adaptive text-white border-b border-adaptive shadow-lg z-40 sticky top-0" dir="ltr">
+    <!-- PRIMARY HEADER SYSTEM BOARD - PERMANENT RTL WRAPPER FOR STRUCTURE STABILITY -->
+    <header class="bg-nav-adaptive text-white border-b border-adaptive shadow-lg z-40 sticky top-0" dir="rtl">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-row justify-between items-center w-full">
             
-            <div class="text-left flex flex-col justify-center">
-                <h1 id="brand-logo" class="text-3xl font-black tracking-tight text-white select-none leading-none pt-1">ڈیجی خبر</h1>
-                <p id="brand-sub" class="text-[9px] tracking-widest text-emerald-300 font-bold uppercase mt-1">ISBN Premium Digital Network</p>
+            <!-- Logo Module Group (Permanently right aligned in RTL) -->
+            <div class="flex items-center text-right mr-4 md:mr-8">
+                <!-- Website Logo -->
+                <img src="https://digikhabar.qzz.io/favicon.png" class="w-11 h-11 rounded-xl border-[2.5px] border-white shadow-sm ml-3 bg-white" alt="DigiKhabar Logo">
+                <div class="flex flex-col justify-center">
+                    <h1 id="brand-logo" class="text-3xl font-black tracking-tight text-white select-none leading-none pt-1">ڈیجی خبر</h1>
+                    <p id="brand-sub" class="text-[9px] tracking-widest text-emerald-300 font-bold uppercase mt-1">ISBN Premium Digital Network</p>
+                </div>
             </div>
 
-            <div class="flex items-center gap-4">
+            <!-- Interactive Navigation Control Cluster -->
+            <div class="flex items-center gap-4 dir-ltr" dir="ltr">
                 <button onclick="toggleDarkMode()" class="p-2.5 rounded-full border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 transition text-amber-400 cursor-pointer flex items-center justify-center shadow-inner" title="Toggle Theme">
+                    <!-- Sun Icon (Shows in Dark Mode to switch to Light) -->
                     <svg id="icon-sun" class="w-4 h-4 hidden text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 3.22a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.22 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-3.22a1 1 0 010-1.415l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 01-1.415 0zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm3.22-4.22a1 1 0 011.415 0l.707-.707a1 1 0 01-1.414-1.414l-.707.707a1 1 0 010 1.415zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path></svg>
+                    <!-- Moon Icon (Shows in Light Mode to switch to Dark) -->
                     <svg id="icon-moon" class="w-4 h-4 block text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                 </button>
 
+                <!-- Neutral Language Choice Toggle -->
                 <div class="flex items-center gap-3 bg-zinc-800 p-1.5 rounded-lg border border-zinc-700 select-none shadow-inner">
                     <span id="lang-label-en" class="text-[11px] font-bold text-zinc-500 uppercase tracking-tight pl-1 transition-colors">EN</span>
                     <label class="relative inline-flex items-center cursor-pointer">
@@ -103,26 +111,33 @@
             </div>
         </div>
 
-        <nav class="bg-black/20 border-t border-adaptive/20">
-            <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto py-2" id="category-bar-anchors" dir="rtl">
-                </div>
+        <!-- CATEGORY NAVIGATION STRIP - PERMANENT RTL -->
+        <nav class="bg-black/20 border-t border-adaptive/20" dir="rtl">
+            <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto py-2" id="category-bar-anchors">
+                <!-- Dynamically injected category buttons attach here -->
+            </div>
         </nav>
     </header>
 
-    <div class="bg-black text-emerald-400 overflow-hidden py-2.5 border-b border-adaptive flex items-center z-30" dir="ltr">
+    <!-- BREAKING LIVE MONITOR TICKER TAPE - PERMANENT RTL -->
+    <div class="bg-black text-emerald-400 overflow-hidden py-2.5 border-b border-adaptive flex items-center z-30" dir="rtl">
         <span id="ticker-label" class="text-white text-xs font-extrabold px-4 py-1 mx-2 rounded shadow-sm shrink-0 z-20 select-none tracking-wider text-center" style="background-color: var(--primary-breaking)">لائیو • BREAKING</span>
         <div class="w-full overflow-hidden relative flex items-center h-5">
             <p id="ticker-target-box" class="ticker-stream-rtl absolute whitespace-nowrap hover:pause cursor-pointer text-[15px] font-semibold flex items-center" style="font-family: inherit;">لوڈ ہو رہا ہے...</p>
         </div>
     </div>
 
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+    <!-- MAIN SYSTEM CONTENT INTERFACE ARCHITECTURE -->
+    <main id="main-content-area" class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+        <!-- Hero Showcase Slot -->
         <div id="hero-spotlight-anchor" class="mb-12"></div>
 
+        <!-- Secondary Feed Content Matrix Grid -->
         <h3 id="feed-header-title" class="text-2xl font-bold mb-6 border-b-2 border-adaptive pb-2 tracking-tight">تازہ ترین خبریں</h3>
         <div id="news-editorial-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </main>
 
+    <!-- HIGH FIDELITY EDITORIAL DISPLAY COMPONENT DRAWER -->
     <div id="editorial-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-surface-adaptive max-w-2xl w-full rounded-xl shadow-2xl border border-adaptive overflow-hidden relative max-h-[90vh] flex flex-col">
             <div class="p-4 border-b border-adaptive flex justify-between items-center bg-black/10" id="modal-header-dir">
@@ -135,16 +150,18 @@
                 <p id="modal-wire-body" class="text-muted-adaptive text-lg text-justify leading-relaxed"></p>
             </div>
             <div class="p-4 border-t border-adaptive flex justify-between items-center bg-black/10" id="modal-footer-dir">
-                <button onclick="closeEditorialDrawer()" id="modal-close-btn" class="text-sm font-bold text-muted-adaptive hover:underline cursor-pointer">بند کریں / Close</button>
+                <button onclick="closeEditorialDrawer()" id="modal-close-btn" class="text-sm font-bold text-muted-adaptive hover:underline cursor-pointer font-sans">بند کریں / Close</button>
                 <a id="modal-wire-link" target="_blank" class="text-white text-sm font-bold px-4 py-2 rounded transition shadow-md font-sans" style="background-color: var(--primary-breaking)" href="#">Read Original Article</a>
             </div>
         </div>
     </div>
 
+    <!-- PRECISE ACADEMIC DISCLOSURE LAYER -->
     <footer class="text-slate-500 py-10 px-6 mt-16 transition-colors duration-300" style="background-color: var(--footer-bg); border-top: 4px solid var(--footer-border);">
         <div class="max-w-7xl mx-auto text-center space-y-4">
             <div class="text-[13px] font-black tracking-wider uppercase font-sans">
-                <a href="https://isbn.qzz.io" target="_blank" class="text-zinc-800 dark:text-slate-200 hover:text-emerald-500 transition duration-300 hover:underline">
+                <!-- Adjusted Contrast for Light Mode -->
+                <a href="https://isbn.qzz.io" target="_blank" class="text-emerald-900 font-bold dark:text-emerald-300 hover:text-emerald-600 transition duration-300 hover:underline">
                     INDIAN SUBCONTINENT BROADCASTING NETWORK (ISBN)
                 </a>
             </div>
@@ -156,15 +173,17 @@
                 <span id="footer-disclaimer-text">یہ سمولیشن میٹرکس ایک خودکار کمپیوٹیشنل ڈپلائمنٹ فریم ورک ہے جو خصوصی طور پر انٹرفیس پریزنٹیشن کے تجزیات اور سافٹ ویئر کی کارکردگی کی جانچ کے لیے بنایا گیا ہے۔ یہ مکمل طور پر غیر تجارتی ہے اور اس کا حقیقی براڈکاسٹ نیٹ ورکس کے ساتھ کوئی باضابطہ کارپوریٹ الحاق نہیں ہے۔ خبروں کا ڈیٹا تصدیق شدہ سینڈ باکس API آپریشنز کے ذریعے خود مختار طور پر حاصل کیا جاتا ہے۔</span>
             </p>
             <div class="text-[10px] text-slate-600 font-mono tracking-tight font-sans mt-4">System Core Deployment Ref: DIGIKHABAR-V3.2026</div>
-            <div id="footer-copyright" class="text-[11px] text-slate-600 font-sans tracking-tight">© 2026 انڈین سب کنٹیننٹ براڈکاسٹنگ نیٹ ورک (ISBN)۔ جملہ حقوق محفوظ ہیں۔</div>
+            <!-- Removed font-sans so it respects the body Nastaleeq inheritance -->
+            <div id="footer-copyright" class="text-[14px] text-slate-600 tracking-tight">© 2026 انڈین سب کنٹیننٹ براڈکاسٹنگ نیٹ ورک (ISBN)۔ جملہ حقوق محفوظ ہیں۔</div>
         </div>
     </footer>
 
+    <!-- INTERACTION CONTROLLER SCRIPT LOGIC -->
     <script>
         const systemLabels = {
             ur: {
                 brand: "ڈیجی خبر", sub: "آئی ایس بی سی پریمیم ڈیجیٹل نیٹ ورک",
-                cats: { general: "اہم خبریں", business: "کاروبار", technology: "سائنس اور ٹیکنالوجی", sports: "کھیل" },
+                cats: { general: "اہم خبریں", articles: "مضامین", business: "کاروبار", technology: "سائنس اور ٹیکنالوجی", sports: "کھیل" },
                 feedTitle: "مزید اہم کہانیاں", fallbackDesc: "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 tickerLabel: "لائیو • BREAKING",
                 readMore: "مزید پڑھیں &rarr;", expandStory: "تفصیلات دیکھیں &rarr;", closeBtn: "بند کریں",
@@ -174,10 +193,10 @@
             },
             en: {
                 brand: "DIGIKHABAR", sub: "ISBN GLOBAL NEWS PIPELINE",
-                cats: { general: "Top Stories", business: "Business Desk", technology: "Tech & Science", sports: "Sports Wire" },
+                cats: { general: "Top Stories", articles: "Articles", business: "Business Desk", technology: "Tech & Science", sports: "Sports Wire" },
                 feedTitle: "In-Depth Coverage Feed", fallbackDesc: "Click the primary external document action item below to access full copy.",
                 tickerLabel: "LIVE • BREAKING",
-                readMore: "Read &rarr;", expandStory: "Expand Story &rarr;", closeBtn: "Close Window",
+                readMore: "Read More &rarr;", expandStory: "Expand Story &rarr;", closeBtn: "Close Window",
                 disclaimerTitle: "Academic Disclaimer Notification:",
                 disclaimerText: "This simulation matrix constitutes an automated computational deployment framework built exclusively for interface presentation analytics and software performance metrics evaluation. It is strictly non-commercial and holds zero formal corporate alignment with actual broadcast networks. News data payloads are fetched autonomously via verified sandbox API operations.",
                 footerContact: "Contact mail:", footerCopy: "© 2026 Indian Subcontinent Broadcasting Network (ISBN). All Rights Reserved."
@@ -208,36 +227,27 @@
 
         function syncThemeIcon() {
             const isDark = document.documentElement.classList.contains('dark');
-            document.getElementById('icon-moon').style.display = isDark ? 'block' : 'none';
-            document.getElementById('icon-sun').style.display = isDark ? 'none' : 'block';
+            // If Dark Mode, show Sun (to toggle light). If Light Mode, show Moon (to toggle dark).
+            document.getElementById('icon-moon').style.display = isDark ? 'none' : 'block';
+            document.getElementById('icon-sun').style.display = isDark ? 'block' : 'none';
         }
 
         function handleLanguageToggle() {
             const isChecked = document.getElementById('lang-toggle-checkbox').checked;
             currentLang = isChecked ? 'ur' : 'en'; 
             
-            // Adjust visual label emphasis for the toggle switch
             document.getElementById('lang-label-ur').className = isChecked ? 'text-[11px] font-bold text-white pr-1 transition-colors' : 'text-[11px] font-bold text-zinc-500 pr-1 transition-colors';
             document.getElementById('lang-label-en').className = !isChecked ? 'text-[11px] font-bold text-white pl-1 transition-colors' : 'text-[11px] font-bold text-zinc-500 pl-1 transition-colors';
             
             const targetDir = currentLang === 'ur' ? 'rtl' : 'ltr';
-            document.body.dir = targetDir;
-            document.getElementById('category-bar-anchors').dir = targetDir;
+            
+            // Only toggle direction for the main content body and modals, leave header fixed RTL
+            document.getElementById('main-content-area').dir = targetDir;
             
             // Handle Modal Layout Directions
             document.getElementById('modal-body-dir').style.textAlign = currentLang === 'ur' ? 'right' : 'left';
             document.getElementById('modal-header-dir').dir = targetDir;
             document.getElementById('modal-footer-dir').dir = targetDir;
-
-            // Handle Ticker Track CSS Direction
-            const tickerBox = document.getElementById('ticker-target-box');
-            if (currentLang === 'ur') {
-                tickerBox.classList.remove('ticker-stream-ltr');
-                tickerBox.classList.add('ticker-stream-rtl');
-            } else {
-                tickerBox.classList.remove('ticker-stream-rtl');
-                tickerBox.classList.add('ticker-stream-ltr');
-            }
 
             if(currentLang === 'ur') {
                 document.documentElement.style.setProperty('--font-current', '"Jameel Noori Nastaleeq", serif');
@@ -283,16 +293,33 @@
             });
         }
 
+        // Helper function: only allow news from today or yesterday
+        function isRecent(dateString) {
+            if (!dateString) return true; // If data lacks date, let it pass
+            const itemDate = new Date(dateString);
+            if (isNaN(itemDate.getTime())) return true; // Unparseable format fallback
+            
+            const now = new Date(); // Use client local time
+            const diffTime = now - itemDate;
+            const diffDays = diffTime / (1000 * 60 * 60 * 24);
+            
+            return diffDays <= 2; // Up to 48 hours allows "yesterday or today" coverage
+        }
+
         function loadContentLayoutStream() {
-            const articles = (activePayload[currentLang] && activePayload[currentLang][currentCategory]) ? activePayload[currentLang][currentCategory] : [];
+            const allArticles = (activePayload[currentLang] && activePayload[currentLang][currentCategory]) ? activePayload[currentLang][currentCategory] : [];
+            
+            // Apply Date Filter
+            const articles = allArticles.filter(a => isRecent(a.date));
+
             const grid = document.getElementById('news-editorial-grid');
             const heroSlot = document.getElementById('hero-spotlight-anchor');
             const ticker = document.getElementById('ticker-target-box');
 
             if(articles.length === 0) {
-                ticker.innerText = "No active news feeds found.";
+                ticker.innerText = "No recent news feeds found.";
                 heroSlot.innerHTML = "";
-                grid.innerHTML = `<div class='col-span-full text-center py-12 opacity-50 text-sm font-sans'>No active reports inside this profile node branch. Please verify news.json payload.</div>`;
+                grid.innerHTML = `<div class='col-span-full text-center py-12 opacity-50 text-sm font-sans'>No recent reports inside this profile node branch (Past 48 Hours).</div>`;
                 return;
             }
 
@@ -309,8 +336,8 @@
                         <h2 class="text-2xl lg:text-3xl font-black leading-snug hover:text-emerald-600 transition">${leadItem.title}</h2>
                         <p class="text-muted-adaptive text-lg line-clamp-3">${leadItem.desc || systemLabels[currentLang].fallbackDesc}</p>
                         <div class="pt-4 border-t border-adaptive flex justify-between items-center text-sm opacity-70">
-                            <span class="font-sans">${leadItem.date}</span>
-                            <span class="font-bold uppercase tracking-wider font-sans" style="color: var(--primary-breaking)">${systemLabels[currentLang].expandStory}</span>
+                            <span class="font-sans">${leadItem.date || ""}</span>
+                            <span class="font-bold uppercase tracking-wider" style="color: var(--primary-breaking)">${systemLabels[currentLang].expandStory}</span>
                         </div>
                     </div>
                 </div>
@@ -334,8 +361,9 @@
                             <p class="text-muted-adaptive text-base line-clamp-2 mt-2">${article.desc || systemLabels[currentLang].fallbackDesc}</p>
                         </div>
                         <div class="pt-4 border-t border-adaptive flex justify-between items-center text-sm opacity-60">
-                            <span class="font-sans">${article.date}</span>
-                            <span class="font-bold font-sans" style="color: var(--primary-breaking)">${systemLabels[currentLang].readMore}</span>
+                            <span class="font-sans">${article.date || ""}</span>
+                            <!-- Removed font-sans from here so it correctly inherits Nastaleeq for Urdu -->
+                            <span class="font-bold" style="color: var(--primary-breaking)">${systemLabels[currentLang].readMore}</span>
                         </div>
                     </div>
                 `;
@@ -344,7 +372,11 @@
         }
 
         function launchEditorialDrawer(index) {
-            const dataRow = activePayload[currentLang][currentCategory][index];
+            // Need to apply the same filter to correctly map the index
+            const allArticles = activePayload[currentLang][currentCategory] || [];
+            const filteredArticles = allArticles.filter(a => isRecent(a.date));
+            const dataRow = filteredArticles[index];
+            
             if(!dataRow) return;
 
             document.getElementById('modal-wire-img').src = dataRow.image;
