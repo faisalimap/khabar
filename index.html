@@ -1,33 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | Page Not Found | ISBN</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <title>ڈیجی خبر - DigiKhabar | ISBC Network</title>
+    <!-- Premium Fonts and Tailwind Setup Matrix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
     <style>
-        .urdu-font { font-family: 'Noto Nastaliq Urdu', serif !important; }
+        /* Strict Semantic Color Map Variables */
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-surface: #F9F9F9;
+            --text-base: #1A1A1A;
+            --text-muted: #555555;
+            --primary-breaking: #C00000;
+            --secondary-nav: #0F2C59;
+            --accent-highlight: #FFB100;
+            --border-color: #E2E8F0;
+            --font-current: "Noto Nastaliq Urdu", serif;
+            --line-height-current: 2.2;
+        }
+
+        .dark {
+            --bg-primary: #121212;
+            --bg-surface: #1E1E1E;
+            --text-base: #E3E3E3;
+            --text-muted: #A0A0A0;
+            --primary-breaking: #E53E3E;
+            --secondary-nav: #1E1E1E;
+            --accent-highlight: #FCD34D;
+            --border-color: #2D2D2D;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-base);
+            font-family: var(--font-current);
+            line-height: var(--line-height-current);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Prevent system text sizing collisions on cursive ligatures */
+        .urdu-text { font-family: "Noto Nastaliq Urdu", serif; line-height: 2.2; }
+        .english-text { font-family: "Roboto", sans-serif; line-height: 1.6; }
+        
+        .border-adaptive { border-color: var(--border-color); }
+        .bg-nav-adaptive { background-color: var(--secondary-nav); }
+        .bg-surface-adaptive { background-color: var(--bg-surface); }
+        .text-muted-adaptive { color: var(--text-muted); }
+        
+        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .ticker-stream { animation: marquee 30s linear infinite; }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col items-center justify-center p-6">
+<body dir="rtl" class="flex flex-col min-h-screen antialiased">
 
-    <div class="text-center space-y-6">
-        <div class="text-9xl font-black text-[#000080] tracking-tighter">404</div>
-        <h1 class="text-3xl font-bold">Page Not Found</h1>
-        <p class="text-slate-600 max-w-md">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable in this broadcast sector.
-        </p>
-        <div class="pt-8">
-            <a href="/" class="bg-[#000080] text-white px-8 py-3 rounded-full font-bold hover:bg-blue-900 transition-colors">
-                Return to Network
-            </a>
+    <!-- PRIMARY HEADER SYSTEM BOARD -->
+    <header class="bg-nav-adaptive text-white border-b border-adaptive shadow-lg z-40 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Logo Module Group -->
+            <div class="text-center md:text-right">
+                <h1 id="brand-logo" class="text-4xl font-black tracking-tight text-white select-none">ڈیجی خبر</h1>
+                <p id="brand-sub" class="text-[10px] tracking-widest text-blue-300 font-bold uppercase">ISBC Premium Digital Network</p>
+            </div>
+
+            <!-- Interactive UI Navigation Control Cluster -->
+            <div class="flex items-center gap-6">
+                <!-- Theme Switcher Switch Button -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 transition text-amber-400 text-sm cursor-pointer" title="Toggle Theme">
+                    🌓
+                </button>
+
+                <!-- Language Selector Slider Switch Box -->
+                <div class="flex items-center gap-2 bg-zinc-800 p-1.5 rounded-lg border border-zinc-700 select-none">
+                    <span class="text-xs font-bold text-zinc-400 uppercase tracking-tight px-1">EN</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="lang-toggle-checkbox" class="sr-only peer" onchange="handleLanguageToggle()">
+                        <div class="w-11 h-6 bg-red-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                    <span class="text-xs font-bold text-white px-1">اردو</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATEGORY DESK NAVIGATION CHANNELS -->
+        <nav class="bg-slate-900/40 backdrop-blur-md border-t border-adaptive">
+            <div class="max-w-7xl mx-auto px-4 flex justify-start gap-1 overflow-x-auto py-2" id="category-bar-anchors">
+                <!-- Dynamically injected category buttons attach here -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- BREAKING LIVE MONITOR TICKER TAPE -->
+    <div class="bg-black text-amber-400 text-xs overflow-hidden py-2.5 border-b border-adaptive flex items-center z-30">
+        <span class="bg-red-600 text-white font-extrabold px-5 py-0.5 mx-2 rounded shadow-sm shrink-0 z-20 select-none uppercase tracking-wider text-center" style="background-color: var(--primary-breaking)">BREAKING • لائیو</span>
+        <div class="w-full overflow-hidden relative flex items-center h-4">
+            <p id="ticker-target-box" class="ticker-stream absolute whitespace-nowrap pl-[100%] hover:pause cursor-pointer text-sm font-semibold">لوڈ ہو رہا ہے...</p>
         </div>
     </div>
 
-    <footer class="absolute bottom-0 w-full text-center py-6 text-[10px] text-slate-400 font-mono">
-        © 2026 Indian Subcontinent Broadcasting Network (ISBN) | Error Code: SIG-404
+    <!-- MAIN SYSTEM CONTENT INTERFACE ARCHITECTURE -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+        
+        <!-- Hero Showcase Slot -->
+        <div id="hero-spotlight-anchor" class="mb-12"></div>
+
+        <!-- Secondary Feed Content Matrix Grid -->
+        <h3 id="feed-header-title" class="text-2xl font-bold mb-6 border-b-2 border-adaptive pb-2 tracking-tight">ملازمت کی سرخیاں</h3>
+        <div id="news-editorial-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </main>
+
+    <!-- HIGH FIDELITY EDITORIAL DISPLAY COMPONENT DRAWER -->
+    <div id="editorial-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-surface-adaptive max-w-3xl w-full rounded-2xl shadow-2xl border border-adaptive overflow-hidden relative max-h-[90vh] flex flex-col">
+            <div class="p-4 border-b border-adaptive flex justify-between items-center bg-black/10">
+                <span id="modal-wire-source" class="text-xs font-bold px-2 py-0.5 rounded uppercase bg-red-600/10 text-red-500">WIRE SERVICE</span>
+                <button onclick="closeEditorialDrawer()" class="text-2xl font-bold opacity-70 hover:opacity-100 cursor-pointer px-2">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4">
+                <img id="modal-wire-img" class="w-full h-72 object-cover rounded-xl border border-adaptive shadow-inner" src="" alt="Wire Document Preview">
+                <h2 id="modal-wire-title" class="text-2xl font-black leading-snug"></h2>
+                <p id="modal-wire-body" class="text-muted-adaptive text-base text-justify leading-relaxed"></p>
+            </div>
+            <div class="p-4 border-t border-adaptive flex justify-between items-center bg-black/10">
+                <button onclick="closeEditorialDrawer()" class="text-xs font-bold text-muted-adaptive hover:underline cursor-pointer">بند کریں / Close</button>
+                <a id="modal-wire-link" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-6 py-2.5 rounded-lg transition shadow-md" href="#">Read Full Document At Original Source</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUBTLE ACADEMIC DEVELOPMENT DISCLOSURE LAYER -->
+    <footer class="bg-surface-adaptive border-t border-adaptive py-8 mt-auto text-xs text-muted-adaptive">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="font-bold tracking-wide">© 2026 Indian Subcontinent Broadcasting Corporation (ISBC) Digital Repository</p>
+            <p class="max-w-3xl mx-auto opacity-40 hover:opacity-100 transition duration-500 select-none">
+                <strong>Notice:</strong> This node represents a production deployment platform built as part of an undergraduate CSE software systems architecture infrastructure portfolio index. All programmatic parsing algorithms run dynamically without commercial hosting overheads.
+            </p>
+        </div>
     </footer>
 
+    <!-- INTERACTION CONTROLLER SCRIPT LOGIC -->
+    <script>
+        // System Localization Maps
+        const systemLabels = {
+            ur: {
+                brand: "ڈیجی خبر", sub: "آئی ایس بی سی پریمیم ڈیجیٹل نیٹ ورک",
+                cats: { general: "اہم خبریں", business: "کاروبار", technology: "سائنس اور ٹیکنالوجی", sports: "کھیل" },
+                feedTitle: "مزید اہم کہانیاں", fallbackDesc: "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔"
+            },
+            en: {
+                brand: "DIGIKHABAR", sub: "ISBC GLOBAL NEWS PIPELINE",
+                cats: { general: "Top Stories", business: "Business Desk", technology: "Tech & Science", sports: "Sports Wire" },
+                feedTitle: "In-Depth Coverage Feed", fallbackDesc: "Click the primary external document action item below to access full copy."
+            }
+        };
+
+        let activePayload = {};
+        let currentLang = 'ur';
+        let currentCategory = 'general';
+
+        async function bootstrapSystem() {
+            try {
+                const response = await fetch('news.json');
+                activePayload = await response.json();
+                renderCategoryNavigation();
+                loadContentLayoutStream();
+            } catch (err) {
+                console.error("Critical System Mount Exception:", err);
+                document.getElementById('news-editorial-grid').innerHTML = `<p class='text-red-500 text-center py-10 font-bold'>System Exception: Unable to interface news.json resource matrix.</p>`;
+            }
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function handleLanguageToggle() {
+            const isChecked = document.getElementById('lang-toggle-checkbox').checked;
+            currentLang = isChecked ? 'ur' : 'en'; // True map sets to Urdu, False matches English fallback
+            
+            // Reflow system reading metrics configurations
+            const targetDir = currentLang === 'ur' ? 'rtl' : 'ltr';
+            document.body.dir = targetDir;
+            
+            if(currentLang === 'ur') {
+                document.documentElement.style.setProperty('--font-current', '"Noto Nastaliq Urdu", serif');
+                document.documentElement.style.setProperty('--line-height-current', '2.2');
+                document.body.className = "flex flex-col min-h-screen antialiased urdu-text";
+            } else {
+                document.documentElement.style.setProperty('--font-current', '"Roboto", sans-serif');
+                document.documentElement.style.setProperty('--line-height-current', '1.6');
+                document.body.className = "flex flex-col min-h-screen antialiased english-text";
+            }
+
+            // Reload text values
+            document.getElementById('brand-logo').innerText = systemLabels[currentLang].brand;
+            document.getElementById('brand-sub').innerText = systemLabels[currentLang].sub;
+            document.getElementById('feed-header-title').innerText = systemLabels[currentLang].feedTitle;
+
+            renderCategoryNavigation();
+            loadContentLayoutStream();
+        }
+
+        function renderCategoryNavigation() {
+            const nav = document.getElementById('category-bar-anchors');
+            nav.innerHTML = '';
+            const categoriesList = Object.keys(systemLabels[currentLang].cats);
+            
+            categoriesList.forEach(catKey => {
+                const button = document.createElement('button');
+                button.innerText = systemLabels[currentLang].cats[catKey];
+                const isActive = catKey === currentCategory;
+                
+                button.className = `px-5 py-2 text-xs font-bold rounded-lg transition shrink-0 cursor-pointer ${isActive ? 'bg-red-600 text-white shadow-md' : 'hover:bg-white/10 text-zinc-300'}`;
+                button.onclick = () => { currentCategory = catKey; renderCategoryNavigation(); loadContentLayoutStream(); };
+                nav.appendChild(button);
+            });
+        }
+
+        function loadContentLayoutStream() {
+            const articles = (activePayload[currentLang] && activePayload[currentLang][currentCategory]) ? activePayload[currentLang][currentCategory] : [];
+            const grid = document.getElementById('news-editorial-grid');
+            const heroSlot = document.getElementById('hero-spotlight-anchor');
+            const ticker = document.getElementById('ticker-target-box');
+
+            if(articles.length === 0) {
+                ticker.innerText = "No active news feeds found.";
+                heroSlot.innerHTML = "";
+                grid.innerHTML = `<div class='col-span-full text-center py-12 opacity-50 text-xs'>No active reports inside this profile node branch.</div>`;
+                return;
+            }
+
+            // Sync Stream Breaking Marquee
+            ticker.innerText = articles.map(a => ` 🔥 ${a.title} `).join("      |      ");
+
+            // Prime Spotlight Lead Card Engine
+            const leadItem = articles[0];
+            heroSlot.innerHTML = `
+                <div class="bg-surface-adaptive border border-adaptive rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 cursor-pointer hover:border-zinc-500 transition duration-300" onclick="launchEditorialDrawer(0)">
+                    <div class="lg:col-span-7 h-72 lg:h-[420px] relative">
+                        <img class="w-full h-full object-cover" src="${leadItem.image}" alt="Main Wire Graphic">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent lg:hidden"></div>
+                    </div>
+                    <div class="p-6 lg:p-10 lg:col-span-5 flex flex-col justify-center space-y-4">
+                        <span class="text-xs font-bold tracking-widest text-red-500 uppercase bg-red-500/10 self-start px-2 py-0.5 rounded">${leadItem.source}</span>
+                        <h2 class="text-2xl lg:text-3xl font-black leading-tight hover:text-red-500 transition">${leadItem.title}</h2>
+                        <p class="text-muted-adaptive text-sm line-clamp-3">${leadItem.desc || systemLabels[currentLang].fallbackDesc}</p>
+                        <div class="pt-4 border-t border-adaptive flex justify-between items-center text-[11px] opacity-60">
+                            <span>${leadItem.date}</span>
+                            <span class="font-bold text-red-500 uppercase tracking-wider">Expand Story &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Subsidiary Grid Components Feed Layout Loop
+            grid.innerHTML = '';
+            articles.slice(1).forEach((article, idx) => {
+                const targetIdx = idx + 1;
+                const card = document.createElement('div');
+                card.className = "bg-surface-adaptive border border-adaptive rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition duration-300 flex flex-col cursor-pointer hover:border-zinc-500";
+                card.onclick = () => launchEditorialDrawer(targetIdx);
+                
+                card.innerHTML = `
+                    <div class="h-48 overflow-hidden border-b border-adaptive">
+                        <img class="w-full h-full object-cover hover:scale-105 transition duration-500" src="${article.image}" alt="Thumbnail Link">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between space-y-3">
+                        <div>
+                            <span class="text-[10px] font-bold text-red-500 uppercase bg-red-500/10 px-2 py-0.5 rounded">${article.source}</span>
+                            <h4 class="font-extrabold text-md mt-2 leading-snug line-clamp-2">${article.title}</h4>
+                            <p class="text-muted-adaptive text-xs line-clamp-3 mt-1">${article.desc || systemLabels[currentLang].fallbackDesc}</p>
+                        </div>
+                        <div class="pt-3 border-t border-adaptive flex justify-between items-center text-[10px] opacity-50">
+                            <span>${article.date}</span>
+                            <span class="font-bold text-red-500">Read &rarr;</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function launchEditorialDrawer(index) {
+            const dataRow = activePayload[currentLang][currentCategory][index];
+            if(!dataRow) return;
+
+            document.getElementById('modal-wire-img').src = dataRow.image;
+            document.getElementById('modal-wire-source').innerText = dataRow.source;
+            document.getElementById('modal-wire-title').innerText = dataRow.title;
+            document.getElementById('modal-wire-body').innerText = dataRow.desc || systemLabels[currentLang].fallbackDesc;
+            document.getElementById('modal-wire-link').href = dataRow.url;
+            
+            document.getElementById('editorial-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Freeze scrolling context
+        }
+
+        function closeEditorialDrawer() {
+            document.getElementById('editorial-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        window.onload = bootstrapSystem;
+    </script>
 </body>
 </html>
