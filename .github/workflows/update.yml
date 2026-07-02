@@ -1,71 +1,30 @@
-name: DigiKhabar Premium Pipeline Automation
+name: Update News Data
 
 on:
-  schedule:
-    - cron: '0 4 * * *' # Backup daily fire at 04:00 UTC
-  workflow_dispatch: # Allows your Cloudflare Worker to trigger this every 40 minutes
+  workflow_dispatch: # Allows your Cloudflare Worker to trigger this run
 
-# Combined permissions for writing code changes AND publishing to GitHub Actions Pages
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-# Prevents multiple concurrent deployments from stepping on each other
-concurrency:
-  group: "pages-deployment"
-  cancel-in-progress: true
 
 jobs:
-  scrape-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-push:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Import Main Branch Code Repository
+      - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Configure Python Runtime Environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Production Scraper Dependencies
+      - name: Run Your News Fetcher
         run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          # This executes your python script or curl command to generate news.json
+          python fetch_news.py 
 
-      - name: Execute Live Scraper Stream Engine
-        env:
-          GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
-          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
-          WORLDNEWS_API_KEY: ${{ secrets.WORLDNEWS_API_KEY }}
-          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
-          NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
-        run: python fetch_news.py
-
-      - name: Check in Fresh Payload to Repository
+      - name: Push Updates to Main Branch
         run: |
-          git config --global user.name "ISBN Media Automation Bot"
-          git config --global user.email "bot@isbn.qzz.io"
-          touch .nojekyll
-          git add .nojekyll news.json
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Only commits and pushes if news.json actually has new variations
-          if ! git diff --staged --quiet; then
-            git commit -m "Automated Network Refresh"
-            git push origin main
-          else
-            echo "No new changes to news.json detected. Skipping redundant commit."
-          fi
-
-      - name: Upload Workspace as Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.' # Compiles your entire root directory (index.html, news.json, etc.)
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          # Adds your index.html, .nojekyll, and news.json
+          git add .
+          
+          # Only commits and pushes if files have actually changed
+          git diff-index --quiet HEAD || (git commit -m "Automated news update" && git push origin main)
