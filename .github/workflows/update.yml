@@ -1,53 +1,63 @@
-name: DigiKhabar Premium Pipeline Automation
+name: Update News Payload
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Fires automatically every day at 04:00 UTC (9:30 AM IST)
-  workflow_dispatch: # Allows you to manually click "Run workflow" from the GitHub Actions dashboard
+    - cron: '0 */6 * * *' # Runs every 6 hours
+  workflow_dispatch:      # Allows you to run this manually anytime
 
-# Concurrency prevents multiple runs from overlapping and breaking the Pages deployment
+# Permissions required to push code changes AND deploy to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Prevents multiple concurrent deployments from clashing
 concurrency:
-  group: "scrape-and-compile"
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  scrape-and-compile:
+  update-payload:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
-    # This grants the GITHUB_TOKEN permission to push files back to your repo
-    permissions:
-      contents: write
-      
+
     steps:
-      - name: Import Main Branch Code Repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Configure Python Runtime Environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
 
-      - name: Install Production Scraper Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Execute Live Scraper Stream Engine
-        env:
-          GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
-          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
-          WORLDNEWS_API_KEY: ${{ secrets.WORLDNEWS_API_KEY }}
-          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
-          NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
-        run: python fetch_news.py
+    - name: Run payload update script
+      run: python main.py
 
-      - name: Check in Fresh Payload & Trigger GitHub Pages Deployment
-        run: |
-          git config --global user.name "ISBN Media Automation Bot"
-          git config --global user.email "bot@isbn.qzz.io"
-          git add news.json
-          
-          # The "|| exit 0" ensures the pipeline doesn't show a red error failure 
-          # if the APIs return the exact same data and there are no changes to commit.
-          git commit -m "Automated Network Refresh [skip ci]" || exit 0
-          git push
+    - name: Check in Fresh Payload
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        touch .nojekyll
+        git add .nojekyll news.json
+        if ! git diff --staged --quiet; then
+          git commit -m "Automated payload update"
+          git push origin main
+        else
+          echo "No changes detected in news.json"
+        fi
+
+    - name: Upload Pages Artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.' # Uploads your entire root directory (index.html, news.json, etc.)
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
