@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, تہران میں سابق ایرانی رہبرِ اعلیٰ علی خامنہ ای کی آخری رسومات کا آغاز",
+                "title": "لائیو, تہران میں سابق ایرانی رہبرِ اعلیٰ علی خامنہ ای کی آخری رسومات جاری",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/bb93/live/195a9aa0-790d-11f1-9ad5-15b7268308e5.png.webp",
                 "url": "https://www.bbc.com/urdu/live/cgjxxypqxj8t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "تردید سے ہلاکت کی تصدیق تک: ایرانی رہبر اعلیٰ کے ہیڈکوارٹر پر حملے کے بعد کیا ہوا تھا؟",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/86fd/live/09dffdd0-7913-11f1-b976-0b9c15b0ccfc.png.webp",
+                "url": "https://www.bbc.com/urdu/articles/ced44x602vjo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0bf1/live/3ab6d9e0-7898-11f1-9510-1546718f668b.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c62117p06qeo",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "’خاتون کو بچانے کی کوشش‘ کے دوران فائرنگ: اسلام آباد میں پاکستانی فضائیہ کے گروپ کیپٹن ہلاک، ملزم گرفتار",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/213f/live/124db9e0-7895-11f1-b976-0b9c15b0ccfc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c6211z6lv3po",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
