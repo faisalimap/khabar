@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, امریکہ یا تو ایران کے ساتھ معاہدہ کرے گا یا پھر ’کام تمام کر دے گا‘: صدر ٹرمپ",
+                "title": "لائیو, عمان کے ساحل کے قریب آئل ٹینکر پر میزائل حملہ",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/805c/live/e42bb640-795f-11f1-9510-1546718f668b.png.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8abf/live/2b6b2680-79b5-11f1-bebe-3701069fbdcb.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/cgjxxypqxj8t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "’حکومت اور ایجنسیاں پتا لگائیں یہ لوگ کون ہیں‘: کوئٹہ کے قریب شدت پسندوں کا حملہ اور مقامی لوگوں کے ’اغوا‘ پر جنم لیتے سوال",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/91ca/live/31378920-794a-11f1-9510-1546718f668b.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cx2661zxze6o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/b777/live/e5d318f0-7944-11f1-bfee-d367081f1131.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c5yzz6gyxx5o",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "سُسر کو قتل کرنے کے بعد بہو کا حقِ دفاع کا دعویٰ: ’تمہارے لیے کماتا ہوں، میری خواہشات پوری کرو‘",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ce88/live/34e09090-7921-11f1-b02f-7384b6bb008f.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/cx2xx023yp8o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
