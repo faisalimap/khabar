@@ -2,7 +2,7 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, دھمکیاں جاری رہیں تو مذاکرات نہیں ہوں گے، اپنے دستخط کی عزت رکھیں: ایران",
+                "title": "لائیو, دھمکیاں جاری رہیں تو مذاکرات نہیں ہوں گے، اپنے دستخط کا پاس رکھیں: ایران",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5d5f/live/738d0d80-79c8-11f1-86c6-df420601713b.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/cgjxxypqxj8t",
@@ -14,6 +14,14 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/f090/live/d619a880-79c5-11f1-8273-c5475254e256.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/cjrgv39v7yxo",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "بچوں کو سبزیاں کھلانا مشکل کیوں ہوتا ہے اور اس کا حل کیا ہے؟",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/805f/live/371072a0-7470-11f1-b8da-6d87dfdc4508.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cpq3wl7q93qo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5060/live/c7f6c490-79ac-11f1-b09b-459fdc8efd5a.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c0myykk9jxno",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "اسلام آباد میں پاکستانی فضائیہ کے افسر کی ہلاکت: عدالت نے ملزم کو شناخت پریڈ کے لیے جوڈیشل ریمانڈ پر بھیج دیا",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/213f/live/124db9e0-7895-11f1-b976-0b9c15b0ccfc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c6211z6lv3po",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
