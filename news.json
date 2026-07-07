@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, قم میں سابق ایرانی رہبرِ اعلیٰ علی خامنہ ای کی آخری رسومات جاری",
+                "title": "لائیو, دھمکیاں جاری رہیں تو مذاکرات نہیں ہوں گے، اپنے دستخط کی عزت رکھیں: ایران",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/83ab/live/9fe8fe70-79be-11f1-b078-9b61a92fb8b3.png.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5d5f/live/738d0d80-79c8-11f1-86c6-df420601713b.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/cgjxxypqxj8t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "’افغان سامورائی‘: جب ایک جاپانی شہری ’موت کی تلاش میں‘ سوویت یونین کے خلاف جنگ کے لیے افغانستان پہنچا",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/f090/live/d619a880-79c5-11f1-8273-c5475254e256.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cjrgv39v7yxo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/213f/live/124db9e0-7895-11f1-b976-0b9c15b0ccfc.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c6211z6lv3po",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "ٹرمپ کی فیفا سے فولارن بالوگن کی سزا معطلی کی درخواست کی تصدیق: ’پابندی برقرار رہتی تو ٹورنامنٹ پر بڑا داغ لگ جاتا‘",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0bf1/live/3ab6d9e0-7898-11f1-9510-1546718f668b.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c62117p06qeo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
