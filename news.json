@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, علی خامنہ ای کی تدفین سے قبل مشہد میں ہزاروں کا مجمع، اردن کا آٹھ ایرانی میزائل گرانے کا دعویٰ",
+                "title": "لائیو, علی خامنہ ای کی تدفین سے قبل مشہد میں ہزاروں کا مجمع، آج چھ روزہ عوامی سوگ کا اختتام",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fc7f/live/39b919b0-7b9d-11f1-9510-1546718f668b.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e410/live/5f47e600-7b9f-11f1-b976-0b9c15b0ccfc.png.webp",
                 "url": "https://www.bbc.com/urdu/live/c20ydg11l2lt",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "ہوشیار پور کے پولیس انسپکٹر امریکہ میں مطلوب کیوں؟",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2f69/live/f252dc60-7b9b-11f1-811c-29009af8a251.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cy06z800633o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -28,16 +36,8 @@
             {
                 "title": "بین سٹوکس کا آئی سی سی پر طنز: ڈریسنگ روم میں بنائی گئی ریٹائرمنٹ کی ویڈیو پر تنازع کیوں ہوا؟",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7f73/live/639b3440-7ad3-11f1-a130-2b898c796aa9.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/9a99/live/199c0d70-7b9f-11f1-88df-c98554e5b30c.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/cn8qe691v7no",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "پہلی عالمی جنگ: 80 برس کے بعد ہندوستان کے ہزاروں پنجابی فوجیوں کی قربانیوں کا باضابطہ اعتراف",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/d113/live/f0203a70-7865-11f1-ab53-3dbca6ef5ee1.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c4gyy2e4401o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
