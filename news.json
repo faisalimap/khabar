@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, ایران پر امریکی حملوں کا نیا سلسلہ، کویت میں بھی میزائل اور ڈرون حملے",
+                "title": "لائیو, امریکی حملوں کے بعد ایران کی جوابی کارروائی: پاسداران انقلاب کا بحرین اور کویت میں امریکی اڈوں پر حملوں کا دعویٰ",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7455/live/212f4f90-7b43-11f1-8a90-1908b2950e9a.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0eae/live/a9ef39a0-7b55-11f1-b72d-a7bd52141e69.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/c20ydg11l2lt",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "ترکی کی عسکری طاقت، ایف-35 طیارہ اور امریکہ کا بدلتا نظریہ: ٹرمپ اور اردوغان کی قربت جو اسرائیل کو پریشان کر رہی ہے",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/d6d3/live/ef9bcaf0-7b54-11f1-b72d-a7bd52141e69.png.webp",
+                "url": "https://www.bbc.com/urdu/articles/cd6e85dpv12o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -26,18 +34,10 @@
                 "date": "تازہ ترین"
             },
             {
-                "title": "شاپور زدران: پشاور کے پناہ گزین کیمپ سے کرکٹ کی شروعات کرنے والے افغان فاسٹ بولر کس مرض میں مبتلا تھے؟",
+                "title": "برطانیہ کا ریپ کے مجرم شبیر احمد کو ملک بدر کرنے کے لیے قانون میں تبدیلی کا اعلان: ’پاکستان کو واضح کریں کہ اسے واپس لینا ہو گا‘",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2807/live/f02f2530-7aef-11f1-bee8-53ce494e1abc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/cqx17n1x18no",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "زیارت میں یرغمالی پولیس اہلکاروں کی ہلاکت: بلوچستان میں چار دن میں شدت پسندی کے تین بڑے واقعات پر آئی ایس پی آر کی بریفنگ",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/bbe8/live/510763d0-7ac9-11f1-b541-536d253827b8.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c1my1vxv4mmo",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/a105/live/4d7551d0-7486-11f1-8e1d-bbbb1017d210.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cdxdgngn7x1o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
