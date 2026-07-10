@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, علی خامنہ ای مشہد میں سپردِ خاک، امریکہ اور ایران کے ایک بار پھر ایک دوسرے پر حملے",
+                "title": "لائیو, تیل کی قیمتوں میں دو فیصد کمی، امریکہ، ایران کشیدگی کو کم کرنے کے لیے پاکستان، قطر اور علاقائی ثالث متحرک",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/85b1/live/6dd806e0-7c09-11f1-9510-1546718f668b.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/a71a/live/0efcb340-7c3c-11f1-b976-0b9c15b0ccfc.png.webp",
                 "url": "https://www.bbc.com/urdu/live/cvgjyv54g48t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "جعلی لائبریری کارڈز سے لاکھوں ڈالر مالیت کی قدیم دستاویزات چرانے پر امریکی شہری کو سزا",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/b6be/live/346ef230-7b12-11f1-994a-0f37fa57a855.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/c17yjjyj4plo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8fca/live/eb7e1730-7c16-11f1-8fcc-25466dd24573.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/cx2vzp8q4l8o",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "’محفوظ راستے‘ کا تنازع: امریکہ اور ایران کے درمیان تازہ جھڑپوں کے بعد آبنائے ہرمز سے تیل اور گیس کی ترسیل کیسے متاثر ہوئی؟",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/b31c/live/68edb690-7c16-11f1-b976-0b9c15b0ccfc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c77yg7d2g34o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
