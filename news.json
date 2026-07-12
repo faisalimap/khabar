@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, امریکی حملے کے بعد ایران نے آبنائے ہرمز بند کر دی، قطر اور متحدہ عرب امارات کا میزائل حملے روکنے کا دعویٰ",
+                "title": "لائیو, امریکی حملے کے بعد ایران نے آبنائے ہرمز بند کر دی، قطر اور متحدہ عرب امارات کا میزائل اور ڈرونز روکنے کا دعویٰ",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/991f/live/e0ac9750-7da1-11f1-a049-155ea2296701.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/cvgjyv54g48t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "پہاڑی کے نیچے بنایا گیا خفیہ بنکر، جہاں سے ایٹمی حملے کے بعد ملک چلانے کا منصوبہ تھا",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2626/live/92f493b0-7cab-11f1-b976-0b9c15b0ccfc.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cp8rg5l1p03o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4c20/live/34d39400-7c5d-11f1-802c-e767a91f6051.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/cm2048y5z5vo",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "اپنے 15 مریضوں کی جان لینے والے ڈاکٹر کو عُمر قید کی سزا: ’مُجھے لگتا تھا کہ میں اُن کی خدمت کر رہا ہوں‘",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/6ec0/live/7f6aecc0-7cfd-11f1-bee8-53ce494e1abc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c0myexnvrr8o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
