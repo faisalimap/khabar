@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "لائیو, ایران کے خلاف امریکی کارروائیوں کے بعد تہران کے کویت، بحرین اور اردن میں جوابی حملے",
+                "title": "لائیو, برطانیہ کا ایرانی پاسداران انقلاب کو کالعدم قرار دینے کا فیصلہ، ایران پر تازہ حملوں میں ہلاکتوں کی اطلاعات",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2147/live/72147910-7e6f-11f1-926f-c90d1bcfbc84.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/795c/live/adc6f8e0-7eb3-11f1-b976-0b9c15b0ccfc.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/czj8rpx3337t",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "وفاقی آئینی عدالت نے مونال ریستوران کے انہدام کا فیصلہ کالعدم قرار دے دیا، معاملہ ٹرائل کورٹ کے سپرد",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/387f/live/eef18150-7eae-11f1-a302-011524d23ac9.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/c4gynvv2nyvo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4fb9/live/72884b10-7c62-11f1-926f-c90d1bcfbc84.png.webp",
                 "url": "https://www.bbc.com/urdu/articles/c98276vemmzo",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "خاتون پر بوائے فرینڈ کے ساتھ مل کر شوہر کو ٹوائلٹ کلینر کا انجیکشن لگا کر قتل کرنے کا الزام",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/a9fa/live/a80c4590-7e86-11f1-acb6-fbe2ff0edcdf.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c23yjkerre1o",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
