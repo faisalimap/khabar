@@ -2,7 +2,7 @@
     "ur": {
         "general": [
             {
-                "title": "کشمیر عوامی ایکشن کمیٹی کا لانگ مارچ: راولاکوٹ شہر سِیل کر دیا گیا، جھڑپوں میں مزید 10 ہلاکتوں کے بعد حالات کشیدہ",
+                "title": "کشمیر عوامی ایکشن کمیٹی کا لانگ مارچ: راولاکوٹ شہر سِیلڈ کر دیا گیا، جھڑپوں میں مزید 10 ہلاکتوں کے بعد حالات کشیدہ",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8c55/live/9a7349d0-8028-11f1-8ae2-1d238eb2d791.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c07y7pm831zo",
@@ -14,6 +14,14 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/280f/live/492bdf30-8035-11f1-a2a1-e90920ef9667.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/cj4g4nvy589o",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "بلوچستان میں بھی محبت کا زمزمہ بہہ رہا ہے",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ba23/live/0d47b350-8039-11f1-86b6-ffbb9ce74513.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/c9929zp9jzdo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -30,14 +38,6 @@
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/36d6/live/71f3e3b0-801a-11f1-9317-f3c8d3f68726.png.webp",
                 "url": "https://www.bbc.com/urdu/articles/cly7yd5w493o",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "لائیو, فوجی چھاؤنی پر کیے گئے امریکی حملے میں سات ہلاکتیں، متعدد زخمی: ایرانی فوج",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e57f/live/c0fd4a90-8020-11f1-bee8-53ce494e1abc.jpg.webp",
-                "url": "https://www.bbc.com/urdu/live/c4gygvjmrvpt",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
