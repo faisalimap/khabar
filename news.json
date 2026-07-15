@@ -2,10 +2,18 @@
     "ur": {
         "general": [
             {
-                "title": "راولاکوٹ سے مظفرآباد: جموں و کشمیر جوائنٹ عوامی ایکشن کمیٹی کا لانگ مارچ آج، تازہ جھڑپوں میں مزید 10 ہلاکتیں",
+                "title": "کشمیر عوامی ایکشن کمیٹی کا لانگ مارچ: راولاکوٹ شہر سِیل کر دیا گیا، جھڑپوں میں مزید 10 ہلاکتوں کے بعد حالات کشیدہ",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5406/live/211138b0-8003-11f1-abea-7311bff0fafb.jpg.webp",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0a3f/live/50c120b0-8027-11f1-8ae2-1d238eb2d791.jpg.webp",
                 "url": "https://www.bbc.com/urdu/articles/c07y7pm831zo",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "احمدی نژاد کے غیر ملکی دورے، محافظوں کو چکما اور اسرائیل کا آپریشن ’پُس اِن بوٹس‘: کیا سابق ایرانی صدر کے موساد سے روابط ہیں؟",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2685/live/b9d0cc50-7f86-11f1-b976-0b9c15b0ccfc.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/cnv9vr61r7mo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             },
@@ -18,26 +26,18 @@
                 "date": "تازہ ترین"
             },
             {
-                "title": "حکومت کا تختہ اُلٹنے کی ناکام کوشش کے بعد صدر اردوغان نے ترکی کو کیسے بدلا؟",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2a47/live/6c5dc9b0-7ecc-11f1-b647-d1fc061ff3d0.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/c15y5vwzqvdo",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
-                "title": "سپین 16 سال بعد فیفا ورلڈ کپ کے فائنل میں، ’آج تو فرانس پہچانا ہی نہیں جا رہا تھا‘",
-                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
-                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/9c69/live/46f258d0-8007-11f1-9f2d-73c25f061f86.jpg.webp",
-                "url": "https://www.bbc.com/urdu/articles/cdejep927k5o",
-                "source": "BBC Urdu",
-                "date": "تازہ ترین"
-            },
-            {
                 "title": "لائیو, فوجی چھاؤنی پر کیے گئے امریکی حملے میں سات ہلاکتیں، متعدد زخمی: ایرانی فوج",
                 "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
                 "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e57f/live/c0fd4a90-8020-11f1-bee8-53ce494e1abc.jpg.webp",
                 "url": "https://www.bbc.com/urdu/live/c4gygvjmrvpt",
+                "source": "BBC Urdu",
+                "date": "تازہ ترین"
+            },
+            {
+                "title": "حکومت کا تختہ اُلٹنے کی ناکام کوشش کے بعد صدر اردوغان نے ترکی کو کیسے بدلا؟",
+                "desc": "تفصیلی مضمون پڑھنے کے لیے لنک پر کلک کریں۔",
+                "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2a47/live/6c5dc9b0-7ecc-11f1-b647-d1fc061ff3d0.jpg.webp",
+                "url": "https://www.bbc.com/urdu/articles/c15y5vwzqvdo",
                 "source": "BBC Urdu",
                 "date": "تازہ ترین"
             }
